@@ -1,4 +1,4 @@
-# Demo 1
+# Demo
 
 [Docker Hub](https://hub.docker.com/)
 [Play With Docker](https://labs.play-with-docker.com/)
@@ -111,9 +111,9 @@ mv /ver.py /home
 ```
 
 ```bash
-docker run --rm /home/ver.py:/home/ver.py python python /home/ver.py
-docker run --rm /home/ver.py:/home/ver.py python:3.10  python /home/ver.py 
-docker run --rm /home/ver.py:/home/ver.py python python:3.9 /home/ver.py 
+docker run --rm /root/sypy_2022_docker/ver.py:/home/ver.py python python /home/ver.py
+docker run --rm /root/sypy_2022_docker/ver.py:/home/ver.py python:3.10  python /home/ver.py
+docker run --rm /root/sypy_2022_docker/ver.py:/home/ver.py python python:3.9 /home/ver.py
 
 ls /home
 docker run --rm /home:/code ls /code
@@ -170,9 +170,8 @@ docker start web
 
 
 ```bash
-
-docker run -d -p 9091:80 -v /html/server1:/usr/share/nginx/html:ro --name web1 nginx
-docker run -d -p 9092:80 -v /html/server2:/usr/share/nginx/html:ro --name web2 nginx
+docker run -d -p 9091:80 -v /root/sypy_2022_docker/html/server1:/usr/share/nginx/html:ro --name web1 nginx
+docker run -d -p 9092:80 -v /root/sypy_2022_docker/html/server2:/usr/share/nginx/html:ro --name web2 nginx
 
 ```
 
