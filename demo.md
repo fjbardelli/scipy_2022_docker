@@ -111,13 +111,13 @@ mv /ver.py /home
 ```
 
 ```bash
-docker run --rm /root/sypy_2022_docker/ver.py:/home/ver.py python python /home/ver.py
-docker run --rm /root/sypy_2022_docker/ver.py:/home/ver.py python:3.10  python /home/ver.py
-docker run --rm /root/sypy_2022_docker/ver.py:/home/ver.py python python:3.9 /home/ver.py
+docker run --rm -v /root/sypy_2022_docker/ver.py:/home/ver.py python python /home/ver.py
+docker run --rm -v /root/sypy_2022_docker/ver.py:/home/ver.py python:3.10  python /home/ver.py
+docker run --rm -v /root/sypy_2022_docker/ver.py:/home/ver.py python:3.9 python /home/ver.py
 
-ls /home
-docker run --rm /home:/code ls /code
-docker run --rm /home:/code python python:3.9 /code/ver.py
+ls /root/sypy_2022_docker
+docker run --rm -v /root/sypy_2022_docker:/code python ls /code
+docker run --rm -v /root/sypy_2022_docker:/code python:3.9 python /code/ver.py
 ```
 
 ### Networks & Ping
