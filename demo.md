@@ -1,5 +1,10 @@
 # Demo
 
+## Clonar repo 
+```bash
+git clone https://github.com/fjbardelli/sypy_2022_docker.git
+```
+
 [Docker Hub](https://hub.docker.com/)
 [Play With Docker](https://labs.play-with-docker.com/)
 
@@ -96,18 +101,16 @@ docker ps -a
 
 ### Python & Volumnes
 
+#### Archivo necesario
+
 ```python
+# Archivo ver.py
 import sys
 
 print(sys.version)
 
 print("SyPy 2022")
 print("Salta - Argentina")
-```
-
-```bash
-touch ver.py
-mv /ver.py /home
 ```
 
 ```bash
@@ -166,8 +169,40 @@ docker start web
 
 ### Nginx & Volumnes
 
-- Copiar y  preparar los HTMLs
+#### Archivos necesarios
 
+```html
+<!-- SERVER 1 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>SERVER 1</h1>
+  </body>
+</html>
+```
+
+```html
+<!-- SERVER 2 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>SERVER 2</h1>
+  </body>
+</html>
+
+```
 
 ```bash
 docker run -d -p 9091:80 -v /root/sypy_2022_docker/html/server1:/usr/share/nginx/html:ro --name web1 nginx
@@ -202,12 +237,6 @@ docker start sypy2022
 docker pull  fjbardelli/sypy2022
 docker run -d -p 81:8000 --name sypy2022 fjbardelli/sypy2022
 ```
-
-#### Local
-
-Docker hub
-DockerFile
-
 ### Jupyter
 
 [Oficial](https://jupyterhub.readthedocs.io/en/stable/quickstart-docker.html)
@@ -254,4 +283,4 @@ docker run -d --name=netdata \
 [Portainer](https://www.portainer.io/)
 [Docker Install](https://docs.portainer.io/v/ce-2.9/start/install/server/docker/linux)
 
-#### Se Muestra local para ver una verson de testing con muchos servicios
+#### Se Muestra local para ver una versión de testing con muchos servicios
