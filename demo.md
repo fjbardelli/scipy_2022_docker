@@ -5,8 +5,8 @@
 git clone https://github.com/fjbardelli/sypy_2022_docker.git
 ```
 
-[Docker Hub](https://hub.docker.com/)
-[Play With Docker](https://labs.play-with-docker.com/)
+- [Docker Hub](https://hub.docker.com/)
+- [Play With Docker](https://labs.play-with-docker.com/)
 
 ## installacion
 
@@ -24,10 +24,10 @@ docker system info
 
 ### Primer contenedor
 
-[Hello Wold](https://hub.docker.com/_/hello-world)
-[docker run](https://docs.docker.com/engine/reference/run/)
-[docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
-[docker inspect](https://docs.docker.com/engine/reference/commandline/inspect/)
+- [Hello Wold](https://hub.docker.com/_/hello-world)
+- [docker run](https://docs.docker.com/engine/reference/run/)
+- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
+- [docker inspect](https://docs.docker.com/engine/reference/commandline/inspect/)
 
 
 ```bash
@@ -41,9 +41,9 @@ docker rm hola
 
 ### Corriendo Un Ubuntu real
 
-[Docker Hub Ubuntu](https://hub.docker.com/_/ubuntu)
-[docker Top](https://docs.docker.com/engine/reference/commandline/top/)
-[docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
+- [Docker Hub Ubuntu](https://hub.docker.com/_/ubuntu)
+- [docker Top](https://docs.docker.com/engine/reference/commandline/top/)
+- [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
 
 ```bash
 docker run --name  svr ubuntu
@@ -80,9 +80,9 @@ docker ps -a
 
 ### Python & Tags
 
-[docker image](https://docs.docker.com/engine/reference/commandline/images/)
-[docker pull](https://docs.docker.com/engine/reference/commandline/pull/)
-[Doker Hub - Python](https://hub.docker.com/_/python)
+- [docker image](https://docs.docker.com/engine/reference/commandline/images/)
+- [docker pull](https://docs.docker.com/engine/reference/commandline/pull/)
+- [Doker Hub - Python](https://hub.docker.com/_/python)
 
 ```bash
 docker image ls
@@ -125,9 +125,9 @@ docker run --rm -v /root/sypy_2022_docker:/code python:3.9 python /code/ver.py
 
 ### Networks & Ping
 
-[Docker Networks](https://docs.docker.com/network/)
-[docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)
-[docker network ls](https://docs.docker.com/engine/reference/commandline/network_ls/)
+- [Docker Networks](https://docs.docker.com/network/)
+- [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)
+- [docker network ls](https://docs.docker.com/engine/reference/commandline/network_ls/)
 
 
 ```bash
@@ -151,8 +151,8 @@ apt install -y iproute2
 
 ### Nginx & Port Maping
 
-[docker log]()
-[Docker Hub Nginx](https://hub.docker.com/_/nginx)
+- [docker log]()
+- [Docker Hub Nginx](https://hub.docker.com/_/nginx)
 
 ```bash
 docker run nginx 
@@ -239,8 +239,8 @@ docker run -d -p 81:8000 --name sypy2022 fjbardelli/sypy2022
 ```
 ### Jupyter
 
-[Oficial](https://jupyterhub.readthedocs.io/en/stable/quickstart-docker.html)
-[Preparada](https://medium.com/analytics-vidhya/jupyterhub-docker-31b7a3469872)
+- [Oficial](https://jupyterhub.readthedocs.io/en/stable/quickstart-docker.html)
+- [Preparada](https://medium.com/analytics-vidhya/jupyterhub-docker-31b7a3469872)
 
 *Usuario:*  admin
 *Clave*  change.it!
@@ -255,9 +255,9 @@ docker image ls
 
 ### NetData & Stress Test
 
-[Docker Hub NetData](https://hub.docker.com/r/netdata/netdata)
-[NetData](https://www.netdata.cloud/)
-[Stress Test](https://hub.docker.com/r/progrium/stress/)
+- [Docker Hub NetData](https://hub.docker.com/r/netdata/netdata)
+- [NetData](https://www.netdata.cloud/)
+- [Stress Test](https://hub.docker.com/r/progrium/stress/)
 
 ```bash
 docker run -d --name=netdata \
@@ -280,7 +280,7 @@ docker run -d --name=netdata \
 
 ### Portainer
 
-[Portainer](https://www.portainer.io/)
-[Docker Install](https://docs.portainer.io/v/ce-2.9/start/install/server/docker/linux)
+- [Portainer](https://www.portainer.io/)
+- [Docker Install](https://docs.portainer.io/v/ce-2.9/start/install/server/docker/linux)
 
 #### Se Muestra local para ver una versión de testing con muchos servicios
