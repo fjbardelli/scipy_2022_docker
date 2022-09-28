@@ -124,8 +124,6 @@ Los volúmenes son como discos duros virtuales administrados por Docker. Docker 
 - docker pull «image_name»:«tag»
 - docker push «image_name»:«tag»
 
-## DEMO
-
 ## Construcción de una Imágenes
 
 - ¿Que es un Docker File?
@@ -142,8 +140,6 @@ RUN	Ejecuta el comando indicado durante el proceso de creación de imagen.
 - tags
 - registry
 - push / pull
-
-## DEMO
 
 ## Material
 
