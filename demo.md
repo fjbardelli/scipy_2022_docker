@@ -2,8 +2,11 @@
 
 ## Clonar repo 
 ```bash
-git clone https://github.com/fjbardelli/sypy_2022_docker.git
+git clone https://github.com/fjbardelli/sci_2022_docker.git
 ```
+
+### Inicio
+
 
 - [Docker Hub](https://hub.docker.com/)
 - [Play With Docker](https://labs.play-with-docker.com/)
@@ -109,18 +112,18 @@ import sys
 
 print(sys.version)
 
-print("SyPy 2022")
+print("scipy 2022")
 print("Salta - Argentina")
 ```
 
 ```bash
-docker run --rm -v /root/sypy_2022_docker/ver.py:/home/ver.py python python /home/ver.py
-docker run --rm -v /root/sypy_2022_docker/ver.py:/home/ver.py python:3.10  python /home/ver.py
-docker run --rm -v /root/sypy_2022_docker/ver.py:/home/ver.py python:3.9 python /home/ver.py
+docker run --rm -v /root/scipy_2022_docker/ver.py:/home/ver.py python python /home/ver.py
+docker run --rm -v /root/scipy_2022_docker/ver.py:/home/ver.py python:3.10  python /home/ver.py
+docker run --rm -v /root/scipy_2022_docker/ver.py:/home/ver.py python:3.9 python /home/ver.py
 
-ls /root/sypy_2022_docker
-docker run --rm -v /root/sypy_2022_docker:/code python ls /code
-docker run --rm -v /root/sypy_2022_docker:/code python:3.9 python /code/ver.py
+ls /root/scipy_2022_docker
+docker run --rm -v /root/scipy_2022_docker:/code python ls /code
+docker run --rm -v /root/scipy_2022_docker:/code python:3.9 python /code/ver.py
 ```
 
 ### Networks & Ping
@@ -131,11 +134,11 @@ docker run --rm -v /root/sypy_2022_docker:/code python:3.9 python /code/ver.py
 
 
 ```bash
-docker networks create sypy
+docker networks create scipy
 docker networks ls
-docker run -d --name svr1 --network sypy ubutnu sleep infinity
+docker run -d --name svr1 --network scipy ubutnu sleep infinity
 docker inspect svr1 --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $INSTANCE_ID
-docker run -d --name svr2 --network sypy ubutnu sleep infinity
+docker run -d --name svr2 --network scipy ubutnu sleep infinity
 docker inspect svr2 --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $INSTANCE_ID
 docker ps
 
@@ -205,8 +208,8 @@ docker start web
 ```
 
 ```bash
-docker run -d -p 9091:80 -v /root/sypy_2022_docker/html/server1:/usr/share/nginx/html:ro --name web1 nginx
-docker run -d -p 9092:80 -v /root/sypy_2022_docker/html/server2:/usr/share/nginx/html:ro --name web2 nginx
+docker run -d -p 9091:80 -v /root/scipy_2022_docker/html/server1:/usr/share/nginx/html:ro --name web1 nginx
+docker run -d -p 9092:80 -v /root/scipy_2022_docker/html/server2:/usr/share/nginx/html:ro --name web2 nginx
 
 ```
 
@@ -217,25 +220,25 @@ docker run -d -p 9092:80 -v /root/sypy_2022_docker/html/server2:/usr/share/nginx
 **Explicar el Docker File**
 
 ```bash
-docker build -t sypy2022 .
-docker tag sypy2022 fjbardelli/sypy2022
-docker push  fjbardelli/sypy2022
+docker build -t scipy2022 .
+docker tag scipy2022 fjbardelli/scipy2022
+docker push  fjbardelli/scipy2022
 ```
 
 #### Play With Docker
 
 ```bash
-docker pull  fjbardelli/sypy2022
-docker run -d -p 81:8000 --name sypy2022 fjbardelli/sypy2022
+docker pull  fjbardelli/scipy2022
+docker run -d -p 81:8000 --name scipy2022 fjbardelli/scipy2022
 ```
 
 #### Cambiar la App
 
 ```bash
-docker stop sypy2022
-docker start sypy2022
-docker pull  fjbardelli/sypy2022
-docker run -d -p 81:8000 --name sypy2022 fjbardelli/sypy2022
+docker stop scipy2022
+docker start scipy2022
+docker pull  fjbardelli/scipy2022
+docker run -d -p 81:8000 --name scipy2022 fjbardelli/scipy2022
 ```
 ### Jupyter
 
